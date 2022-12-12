@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20221212 11:02:14.254" rpa="false" schemaversion="2">
+<suite id="s1" name="Ass2" source="C:\workspace\Robot_Framework\ass2">
+<suite id="s1-s1" name="Assignment" source="C:\workspace\Robot_Framework\ass2\Assignment.robot">
+<test id="s1-s1-t1" name="Automation practice - exercise">
+<kw name="Open and Maximize Browser" library="resource">
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221212 11:02:14.556" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221212 11:02:14.556" endtime="20221212 11:02:19.120"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221212 11:02:19.120" endtime="20221212 11:02:19.965"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:14.555" endtime="20221212 11:02:19.966"/>
+</kw>
+<kw name="Go To Website" library="resource">
+<arg>${TEST_PAGE}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${TEST_PAGE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221212 11:02:19.969" level="INFO">Opening url 'https://www.sconto.sk'</msg>
+<status status="PASS" starttime="20221212 11:02:19.968" endtime="20221212 11:02:25.537"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:19.967" endtime="20221212 11:02:25.537"/>
+</kw>
+<kw name="Verify Title" library="resource">
+<arg>Nábytok pre bývanie, ktorý dáva zmysel | Sconto</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221212 11:02:25.567" level="INFO">Page title is 'Nábytok pre bývanie, ktorý dáva zmysel | Sconto'.</msg>
+<status status="PASS" starttime="20221212 11:02:25.539" endtime="20221212 11:02:25.568"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:25.538" endtime="20221212 11:02:25.568"/>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<arg>${cookie_button}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${cookie_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:25.570" endtime="20221212 11:02:26.278"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookie_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:26.280" level="INFO">Clicking element '//button[contains(text(),"Súhlasím")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:26.278" endtime="20221212 11:02:27.306"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:25.568" endtime="20221212 11:02:27.307"/>
+</kw>
+<kw name="Hover Over Category" library="resource">
+<arg>${category_dropdown}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${category_dropdown}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:27.310" endtime="20221212 11:02:28.050"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${category_dropdown}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20221212 11:02:28.053" level="INFO">Simulating Mouse Over on element '//nav/ul/li/a[@href="/nabytok"]'.</msg>
+<status status="PASS" starttime="20221212 11:02:28.051" endtime="20221212 11:02:29.096"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:27.308" endtime="20221212 11:02:29.096"/>
+</kw>
+<kw name="Select Category" library="resource">
+<arg>${beds_option}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${beds_option}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:29.099" endtime="20221212 11:02:29.860"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${beds_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:29.861" level="INFO">Clicking element '//div/a/span[contains(text(),"Postele")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:29.861" endtime="20221212 11:02:33.846"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:29.097" endtime="20221212 11:02:33.847"/>
+</kw>
+<kw name="Sort Category" library="resource">
+<arg>${sort_button}</arg>
+<arg>${most_expensive_option}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${sort_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:33.850" endtime="20221212 11:02:34.747"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${sort_button}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20221212 11:02:34.749" level="INFO">Simulating Mouse Over on element '//span[contains(@class,"order")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:34.747" endtime="20221212 11:02:35.740"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${most_expensive_option}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221212 11:02:35.740" endtime="20221212 11:02:37.444"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${most_expensive_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:37.447" level="INFO">Clicking element '//a[contains(text(),"od najdrahšieho")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:37.445" endtime="20221212 11:02:38.425"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:33.848" endtime="20221212 11:02:38.425"/>
+</kw>
+<kw name="Select First Item" library="resource">
+<arg>${first_item}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${first_item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:38.429" level="INFO">Clicking element '//div[contains(@data-image,"zumba")]/following-sibling::h2/span[contains(@class,"name")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:38.427" endtime="20221212 11:02:41.351"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:38.426" endtime="20221212 11:02:41.352"/>
+</kw>
+<kw name="Add To Cart" library="resource">
+<arg>${add_to_cart_button}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${add_to_cart_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:41.355" endtime="20221212 11:02:42.013"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${add_to_cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:42.015" level="INFO">Clicking element '//div[@itemprop]/following-sibling::form/button[contains(@name,"add")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:42.013" endtime="20221212 11:02:42.879"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:41.353" endtime="20221212 11:02:42.879"/>
+</kw>
+<kw name="Continue Shopping" library="resource">
+<arg>${continue_button}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${continue_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:42.882" endtime="20221212 11:02:43.553"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:43.556" level="INFO">Clicking element '//a[contains(@class,"cancel")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:43.554" endtime="20221212 11:02:44.357"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:42.881" endtime="20221212 11:02:44.358"/>
+</kw>
+<kw name="Back To Category" library="resource">
+<arg>${beds_category_button}</arg>
+<arg>${popup_close_button}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${beds_category_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:44.362" level="INFO">Clicking element '//a[contains(text(),"Postele")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:44.361" endtime="20221212 11:02:47.953"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${popup_close_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:47.953" endtime="20221212 11:02:49.221"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${popup_close_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:49.224" level="INFO">Clicking element '//a[contains(@id,"popup-close")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:49.222" endtime="20221212 11:02:50.026"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:44.359" endtime="20221212 11:02:50.026"/>
+</kw>
+<kw name="Select Second Item" library="resource">
+<arg>${second_item}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${second_item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:50.029" level="INFO">Clicking element '//div[contains(@data-image,"florence")]/following-sibling::h2/span[contains(@class,"name")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:50.028" endtime="20221212 11:02:52.955"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:50.027" endtime="20221212 11:02:52.956"/>
+</kw>
+<kw name="Add To Cart" library="resource">
+<arg>${add_to_cart_button}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${add_to_cart_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:52.959" endtime="20221212 11:02:52.995"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${add_to_cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:52.997" level="INFO">Clicking element '//div[@itemprop]/following-sibling::form/button[contains(@name,"add")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:52.996" endtime="20221212 11:02:53.819"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:52.957" endtime="20221212 11:02:53.820"/>
+</kw>
+<kw name="Go To Cart" library="resource">
+<arg>${go_to_cart_button}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${go_to_cart_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221212 11:02:53.822" endtime="20221212 11:02:54.538"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${go_to_cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221212 11:02:54.541" level="INFO">Clicking element '//a[contains(@class,"continue")]'.</msg>
+<status status="PASS" starttime="20221212 11:02:54.540" endtime="20221212 11:02:56.516"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:53.821" endtime="20221212 11:02:56.516"/>
+</kw>
+<status status="PASS" starttime="20221212 11:02:14.555" endtime="20221212 11:02:56.517"/>
+</test>
+<doc>A test suite with one test case for complete automation testing of given page.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20221212 11:02:14.290" endtime="20221212 11:02:56.520"/>
+</suite>
+<status status="PASS" starttime="20221212 11:02:14.259" endtime="20221212 11:02:56.526"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ass2">Ass2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Assignment">Ass2.Assignment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
